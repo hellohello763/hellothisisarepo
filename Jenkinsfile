@@ -9,15 +9,19 @@ pipeline {
 
     // no semicolon, each statement needs to be on its own line
 
-    agent {
-        node {
-            label 'any'
-            customWorkspace '~/Downsloads/hihihi'
-        }
-    }
+    agent any
+
+    // agent {
+    //     node {
+    //         label 'any'
+    //         customWorkspace '~/Downsloads/hihihi'
+    //     }
+    // }
 
     options {
+        customWorkspace '~/Downsloads/hihihi'
         timeout(time: 30, unit: 'SECONDS')
+
     }
 
     stages {
