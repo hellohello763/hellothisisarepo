@@ -33,7 +33,7 @@ pipeline {
 
         stage('run black style check on the code base') {
             steps {
-                sh 'echo lalala'
+                sh 'make format'
             }
             
         }
