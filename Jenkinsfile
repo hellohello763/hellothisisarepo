@@ -26,12 +26,16 @@ pipeline {
             steps{
                 // stash includes: '**', name: 'repoFiles'
                 // sh 'echo hello'
-                sh '''
-                    python3 -m venv .
-                    . ./bin/activate
-                    make install
-                    make format
-                ''' 
+                sh 'python3 -m venv .'
+                sh 'source ./bin/activate'
+                sh 'make install'
+            }
+            
+        }
+
+        stage('run black style check on the code base') {
+            steps {
+                sh 'make format'
             }
             
         }
