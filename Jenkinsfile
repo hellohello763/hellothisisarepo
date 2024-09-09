@@ -22,16 +22,25 @@ pipeline {
 
     stages {
         stage('first stage') {
-            sh 'echo hello'
+            steps{
+                sh 'echo hello'
+            }
+            
         }
 
         stage('second stage') {
-            sh 'echo hello'
+            steps {
+                sh 'echo hello'
+            }
+            
         }
 
 
         stage('third stage') {
-            sh 'echo hello'
+
+            steps{
+                sh 'echo hello'
+            }
         }
     }
 
