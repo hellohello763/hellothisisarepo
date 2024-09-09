@@ -30,14 +30,8 @@ pipeline {
                     python3 -m venv .
                     . ./bin/activate
                     make install
+                    make format
                 ''' 
-            }
-            
-        }
-
-        stage('run black style check on the code base') {
-            steps {
-                sh 'make format'
             }
             
         }
