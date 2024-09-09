@@ -24,6 +24,7 @@ pipeline {
     stages {
         stage('first stage') {
             steps{
+                stash includes: '**', name: 'repoFiles'
                 sh 'echo hello'
             }
             
