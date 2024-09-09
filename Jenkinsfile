@@ -12,7 +12,7 @@ pipeline {
     agent {
         node {
             label 'hello_my_computer_node'
-            customWorkspace '~/Downloads/hihihi'
+            customWorkspace '/Users/yefeili/Downloads/hihihi'
         }
     }
 
@@ -24,7 +24,7 @@ pipeline {
     stages {
         stage('first stage') {
             steps{
-                stash includes: '**', name: 'repoFiles'
+                // stash includes: '**', name: 'repoFiles'
                 sh 'echo hello'
             }
             
