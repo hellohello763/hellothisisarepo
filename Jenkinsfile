@@ -11,7 +11,7 @@ pipeline {
 
     agent {
         node {
-            label any
+            label 'any'
             customWorkspace '~/Downsloads/hihihi'
         }
     }
