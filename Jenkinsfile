@@ -22,17 +22,18 @@ pipeline {
     }
 
     stages {
-        stage('first stage') {
+        stage('make install, installling dependencies') {
             steps{
                 // stash includes: '**', name: 'repoFiles'
-                sh 'echo hello'
+                // sh 'echo hello'
+                sh 'make install'
             }
             
         }
 
-        stage('second stage') {
+        stage('run black style check on the code base') {
             steps {
-                sh 'echo hello'
+                sh 'echo lalala'
             }
             
         }
@@ -41,7 +42,8 @@ pipeline {
         stage('third stage') {
 
             steps{
-                sh 'echo hello'
+                sh 'echo zip to package all the files to result.zip'
+                sh 'zip result.zip *'
             }
         }
     }
