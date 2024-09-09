@@ -12,7 +12,7 @@ pipeline {
     agent {
         node {
             label any
-            customeWorkspace '~/Downsloads/hihihi'
+            customWorkspace '~/Downsloads/hihihi'
         }
     }
 
