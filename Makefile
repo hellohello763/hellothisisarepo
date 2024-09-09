@@ -5,9 +5,9 @@ format:
 	black .
 
 install:
-	pip3 install -r requirements.txt
+	pip install -r requirements.txt
 
 run:
-	python3 hello.py
+	python hello.py
 
 all: format install run
