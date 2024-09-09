@@ -26,6 +26,8 @@ pipeline {
             steps{
                 // stash includes: '**', name: 'repoFiles'
                 // sh 'echo hello'
+                sh 'python3 -m venv .'
+                sh 'source ./bin/activate'
                 sh 'make install'
             }
             
